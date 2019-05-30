@@ -1,6 +1,9 @@
-// The getElementById is a method used an specific element
-// The innerHTML property is useful for getting or replacing the content of HTML elements
-var oldText = document.getElementById('demo').innerHTML;
-console.log(oldText);
-
-document.getElementById('demo').innerHTML = 'Salut, monde ! :D';
+// THE DOCUMENT OBJECT
+console.dir(document);
+// I can get any element into a HTML document
+console.log(document.URL);
+console.log(document.title);
+document.title = 'This DOM Sandbox is AWESOME!'; // changes title
+console.log(document.title);
+console.log(document.doctype);
+console.log(document.all); // html collection with everything in the DOM
