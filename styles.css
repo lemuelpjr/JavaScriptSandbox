@@ -12,8 +12,7 @@ html {
 }
 
 body {
-  background-color: #f8f8f8;
-  color: #444;
+  background-color: #2a2a2a;
   font-family: 'Ubuntu';
 }
 
@@ -24,9 +23,11 @@ body {
 }
 
 .title {
+  color: #f06;
   font-size: 1.3rem;
 }
 
 .text {
+  color: #eee;
   font-size: 1.15rem;
 }
