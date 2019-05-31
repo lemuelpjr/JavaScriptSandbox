@@ -28,10 +28,18 @@
 // }
 
 // GET ELEMENTS BY TAG NAME
-var list = document.getElementsByTagName('li');
-console.log(list);
-list[0].style.fontWeight = 'bold';
+// var list = document.getElementsByTagName('li');
+// console.log(list);
+// list[0].style.fontWeight = 'bold';
 
-for (var i = 0; i < list.length; i += 2) {
-  list[i].style.backgroundColor = '#0c6';
-}
+// for (var i = 0; i < list.length; i += 2) {
+//   list[i].style.backgroundColor = '#0c6';
+// }
+
+// QUERY SELECTOR
+
+var header = document.querySelector('.title');
+header.style.backgroundColor = '#f06';
+header.style.color = '#2a2a2a';
+var lastItem = document.querySelector('.list-item:last-child');
+lastItem.style.fontSize = '1.3rem';
