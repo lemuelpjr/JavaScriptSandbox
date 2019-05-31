@@ -13,6 +13,7 @@ html {
 
 body {
   background-color: #2a2a2a;
+  color: #eee;
   font-family: 'Ubuntu';
 }
 
@@ -27,7 +28,10 @@ body {
   font-size: 1.3rem;
 }
 
-.text {
-  color: #eee;
+.#paragraph-one {
   font-size: 1.15rem;
+}
+
+.list-item {
+  padding: 5px;
 }
