@@ -18,11 +18,20 @@
 // console.log(paragraphOne);
 
 // GET ELEMENTS BY CLASS NAME
-var items = document.getElementsByClassName('list-item');
-console.log(items);
-items[0].innerHTML = 'Eae mundão kkk!';
-items[0].style.fontWeight = 'bold';
+// var items = document.getElementsByClassName('list-item');
+// console.log(items);
+// items[0].innerHTML = 'Eae mundão kkk!';
+// items[0].style.fontWeight = 'bold';
 
-for (var i = 1; i < items.length; i += 2) {
-  items[i].style.backgroundColor = '#0c6';
+// for (var i = 1; i < items.length; i += 2) {
+//   items[i].style.backgroundColor = '#0c6';
+// }
+
+// GET ELEMENTS BY TAG NAME
+var list = document.getElementsByTagName('li');
+console.log(list);
+list[0].style.fontWeight = 'bold';
+
+for (var i = 0; i < list.length; i += 2) {
+  list[i].style.backgroundColor = '#0c6';
 }
