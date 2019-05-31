@@ -37,9 +37,14 @@
 // }
 
 // QUERY SELECTOR
+// var header = document.querySelector('.title');
+// header.style.backgroundColor = '#f06';
+// header.style.color = '#2a2a2a';
+// var lastItem = document.querySelector('.list-item:last-child');
+// lastItem.style.fontSize = '1.3rem';
 
-var header = document.querySelector('.title');
-header.style.backgroundColor = '#f06';
-header.style.color = '#2a2a2a';
-var lastItem = document.querySelector('.list-item:last-child');
-lastItem.style.fontSize = '1.3rem';
+// QUERY SELECTOR ALL
+var odd = document.querySelectorAll('li:nth-child(odd)');
+for (var i = 0; i < odd.length; i++) {
+  odd[i].style.color = '#0f6';
+}
