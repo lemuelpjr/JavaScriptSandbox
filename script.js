@@ -58,6 +58,16 @@ var itemList = document.querySelector('#items');
 // itemList.parentElement.style.color = '#2a2a2a';
 
 // CHILD NODES AND CHILDREN
-console.log(itemList.childNodes); // outputs line breaks and spaces
-console.log(itemList.children); // doesn't output line breaks and spaces
-itemList.children[2].style.color = '#f06';
+// console.log(itemList.childNodes); // outputs line breaks and spaces
+// console.log(itemList.children); // doesn't output line breaks and spaces
+// itemList.children[2].style.color = '#f06';
+
+// FIRST CHILD AND FIRST ELEMENT CHILD
+console.log(itemList.firstChild); // outputs line breaks and spaces
+console.log(itemList.firstElementChild); // outputs the real first child element
+itemList.firstElementChild.textContent = 'Hey yo!';
+
+// LAST CHILD AND LAST ELEMENT CHILD
+console.log(itemList.lastChild); // outputs line breaks and spaces
+console.log(itemList.lastElementChild); // outputs the real last child element
+itemList.lastElementChild.textContent = 'さようなら！';
