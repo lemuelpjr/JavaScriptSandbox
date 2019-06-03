@@ -44,7 +44,15 @@
 // lastItem.style.fontSize = '1.3rem';
 
 // QUERY SELECTOR ALL
-var odd = document.querySelectorAll('li:nth-child(odd)');
-for (var i = 0; i < odd.length; i++) {
-  odd[i].style.color = '#0f6';
-}
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// for (var i = 0; i < odd.length; i++) {
+//   odd[i].style.color = '#0f6';
+// }
+
+// PARENT NODE
+var itemList = document.querySelector('#items');
+console.log(itemList.parentNode);
+itemList.parentNode.style.backgroundColor = '#0c6';
+
+// PARENT ELEMENT
+itemList.parentElement.style.color = '#2a2a2a';
