@@ -51,8 +51,13 @@
 
 // PARENT NODE
 var itemList = document.querySelector('#items');
-console.log(itemList.parentNode);
-itemList.parentNode.style.backgroundColor = '#0c6';
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#0c6';
 
 // PARENT ELEMENT
-itemList.parentElement.style.color = '#2a2a2a';
+// itemList.parentElement.style.color = '#2a2a2a';
+
+// CHILD NODES AND CHILDREN
+console.log(itemList.childNodes); // outputs line breaks and spaces
+console.log(itemList.children); // doesn't output line breaks and spaces
+itemList.children[2].style.color = '#f06';
