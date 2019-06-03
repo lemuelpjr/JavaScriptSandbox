@@ -50,7 +50,7 @@
 // }
 
 // PARENT NODE
-var itemList = document.querySelector('#items');
+// var itemList = document.querySelector('#items');
 // console.log(itemList.parentNode);
 // itemList.parentNode.style.backgroundColor = '#0c6';
 
@@ -73,9 +73,18 @@ var itemList = document.querySelector('#items');
 // itemList.lastElementChild.textContent = 'さようなら！';
 
 // NEX SIBLING AND NEXT ELEMENT SIBLING
-console.log(itemList.nextSibling); // outputs line breaks and spaces
-console.log(itemList.nextElementSibling); // outputs the real next sibling element
+// console.log(itemList.nextSibling); // outputs line breaks and spaces
+// console.log(itemList.nextElementSibling); // outputs the real next sibling element
 
 // PREVIOUS SIBLING AND PREVIOUS ELEMENT SIBLING
-console.log(itemList.previousSibling); // outputs line breaks and spaces
-console.log(itemList.previousElementSibling); // outputs the real previous sibling element
+// console.log(itemList.previousSibling); // outputs line breaks and spaces
+// console.log(itemList.previousElementSibling); // outputs the real previous sibling element
+
+// CREATE ELEMENT
+var newDiv = document.createElement('div');
+newDiv.className = 'more-content';
+newDiv.id = 'script-div';
+
+var newDivText = document.createTextNode('Hello world!');
+newDiv.appendChild(newDivText);
+console.log(newDiv);
