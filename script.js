@@ -81,10 +81,23 @@
 // console.log(itemList.previousElementSibling); // outputs the real previous sibling element
 
 // CREATE ELEMENT
-var newDiv = document.createElement('div');
-newDiv.className = 'more-content';
-newDiv.id = 'script-div';
+// var newDiv = document.createElement('div');
+// newDiv.className = 'more-content';
+// newDiv.id = 'script-div';
 
-var newDivText = document.createTextNode('Hello world!');
-newDiv.appendChild(newDivText);
-console.log(newDiv);
+// var newDivText = document.createTextNode('Hello world!');
+// newDiv.appendChild(newDivText);
+// console.log(newDiv);
+
+// ADD EVENT LISTENERS
+// var button = document.getElementById('button').addEventListener('click', function(){
+//   console.log('Yeehaaa!'); // anonymous function
+// });
+// var button = document.getElementById('button').addEventListener('click', cowboyShout);
+// function cowboyShout() {
+//   console.log('Yeehaaa!');
+// }
+var button = document.getElementById('button').addEventListener('click', function(){
+  document.querySelector('.list-item:last-child').style.backgroundColor = '#0c6';
+  document.querySelector('.list-item:last-child').style.color = '#2a2a2a';
+});
