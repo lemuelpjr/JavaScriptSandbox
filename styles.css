@@ -28,10 +28,26 @@ body {
   font-size: 1.3rem;
 }
 
+.content {
+  margin-bottom: 36px;
+}
+
 .#paragraph-one {
   font-size: 1.15rem;
 }
 
 .list-item {
   padding: 5px;
+}
+
+#button {
+  background-color: #f06;
+  color: #2a2a2a;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 12px;
+  display: block;
+  cursor: pointer;
+  border: none;
 }
