@@ -115,10 +115,18 @@ var bookThree = new Book('Think And Grow Rich', 'Napoleon Hill', 1937);
 
 // OBJECT PROTOTYPES
 Book.prototype.howOld = function (currentYear) {
-  console.log(currentYear - this.year);
+  // console.log(currentYear - this.year);
+  return currentYear - this.year;
 };
 
 // PROTOTYPE INHERITANCE
-bookOne.howOld(2019);
-bookTwo.howOld(2019);
-bookThree.howOld(2019);
+// bookOne.howOld(2019);
+// bookTwo.howOld(2019);
+// bookThree.howOld(2019);
+
+// ADDING CONSTRUCTOR DATA WITH INHERITANCE TO THE DOM
+var lastParagraph = document.querySelector('.list-item:last-child'); 
+
+document.getElementById('button').addEventListener('click', function(){
+  lastParagraph.innerHTML = 'The book I\'m reading now is <em>' + bookOne.title + '</em>, written by ' + bookOne.author + ' and launched in ' + bookOne.year + '. This book is now ' + bookOne.howOld(2019) + ' years old!';
+});
