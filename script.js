@@ -113,6 +113,12 @@ var bookOne = new Book('I, Robot', 'Isaac Asimov', 1950);
 var bookTwo = new Book('Huckleberry Finn', 'Mark Twain', 1885);
 var bookThree = new Book('Think And Grow Rich', 'Napoleon Hill', 1937);
 
-console.log(bookOne);
-console.log(bookTwo);
-console.log(bookThree);
+// OBJECT PROTOTYPES
+Book.prototype.howOld = function (currentYear) {
+  console.log(currentYear - this.year);
+};
+
+// PROTOTYPE INHERITANCE
+bookOne.howOld(2019);
+bookTwo.howOld(2019);
+bookThree.howOld(2019);
