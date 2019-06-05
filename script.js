@@ -97,7 +97,22 @@
 // function cowboyShout() {
 //   console.log('Yeehaaa!');
 // }
-var button = document.getElementById('button').addEventListener('click', function(){
-  document.querySelector('.list-item:last-child').style.backgroundColor = '#0c6';
-  document.querySelector('.list-item:last-child').style.color = '#2a2a2a';
-});
+// var button = document.getElementById('button').addEventListener('click', function(){
+//   document.querySelector('.list-item:last-child').style.backgroundColor = '#0c6';
+//   document.querySelector('.list-item:last-child').style.color = '#2a2a2a';
+// });
+
+// TESTING OBJECT CONSTRUCTORS
+var Book = function (title, author, year) {
+  this.title = title;
+  this.author = author;
+  this.year = year;
+}
+
+var bookOne = new Book('I, Robot', 'Isaac Asimov', 1950);
+var bookTwo = new Book('Huckleberry Finn', 'Mark Twain', 1885);
+var bookThree = new Book('Think And Grow Rich', 'Napoleon Hill', 1937);
+
+console.log(bookOne);
+console.log(bookTwo);
+console.log(bookThree);
