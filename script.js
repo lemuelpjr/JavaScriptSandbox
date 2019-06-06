@@ -109,6 +109,7 @@ var Book = function (title, author, year) {
   this.year = year;
 }
 
+// BOOK CONSTRUCTOR INSTANCES
 var bookOne = new Book('I, Robot', 'Isaac Asimov', 1950);
 var bookTwo = new Book('Huckleberry Finn', 'Mark Twain', 1885);
 var bookThree = new Book('Think And Grow Rich', 'Napoleon Hill', 1937);
