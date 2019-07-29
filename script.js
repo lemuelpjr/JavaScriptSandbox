@@ -102,32 +102,68 @@
 //   document.querySelector('.list-item:last-child').style.color = '#2a2a2a';
 // });
 
-// TESTING OBJECT CONSTRUCTORS
-var Book = function (title, author, year) {
-  this.title = title;
-  this.author = author;
-  this.year = year;
+// // TESTING OBJECT CONSTRUCTORS
+// var Book = function (title, author, year) {
+//   this.title = title;
+//   this.author = author;
+//   this.year = year;
+// }
+
+// // BOOK CONSTRUCTOR INSTANCES
+// var bookOne = new Book('I, Robot', 'Isaac Asimov', 1950);
+// var bookTwo = new Book('Huckleberry Finn', 'Mark Twain', 1885);
+// var bookThree = new Book('Think And Grow Rich', 'Napoleon Hill', 1937);
+
+// // OBJECT PROTOTYPES
+// Book.prototype.howOld = function (currentYear) {
+//   // console.log(currentYear - this.year);
+//   return currentYear - this.year;
+// };
+
+// // PROTOTYPE INHERITANCE
+// // bookOne.howOld(2019);
+// // bookTwo.howOld(2019);
+// // bookThree.howOld(2019);
+
+// // ADDING CONSTRUCTOR DATA WITH INHERITANCE TO THE DOM
+// var lastParagraph = document.querySelector('.list-item:last-child'); 
+
+// document.getElementById('button').addEventListener('click', function(){
+//   lastParagraph.innerHTML = 'The book I\'m reading now is <em>' + bookOne.title + '</em>, written by ' + bookOne.author + ' and launched in ' + bookOne.year + '. This book is now ' + bookOne.howOld(2019) + ' years old!';
+// });
+
+// TESTING OBJECT CONSTRUCTORS AGAIN
+var Tshirt = function (color, size, stamp) {
+  this.color = color;
+  this.size = size; // small, medium, large, extra-large
+  this.stamp = stamp;
 }
 
-// BOOK CONSTRUCTOR INSTANCES
-var bookOne = new Book('I, Robot', 'Isaac Asimov', 1950);
-var bookTwo = new Book('Huckleberry Finn', 'Mark Twain', 1885);
-var bookThree = new Book('Think And Grow Rich', 'Napoleon Hill', 1937);
+// T-SHIRT CONSTRUCTOR INSTANCES
+var tshirtOne = new Tshirt('black', 'medium', true);
+var tshirtTwo = new Tshirt('gray', 'small', false);
+var tshirtThree = new Tshirt('violet', 'large', true);
 
 // OBJECT PROTOTYPES
-Book.prototype.howOld = function (currentYear) {
-  // console.log(currentYear - this.year);
-  return currentYear - this.year;
+Tshirt.prototype.personAge = function (age) {
+  if (age >= 18) {
+    console.log('This T-shirt is for an adult.');
+  } else if (age > 12 && age < 18) {
+    console.log('This T-shirt is for a teen.');
+  } else {
+    console.log('This T-shirt is for a child.');
+  }
 };
 
 // PROTOTYPE INHERITANCE
-// bookOne.howOld(2019);
-// bookTwo.howOld(2019);
-// bookThree.howOld(2019);
+tshirtOne.personAge(28);
+tshirtTwo.personAge(13);
+tshirtThree.personAge(7);
 
 // ADDING CONSTRUCTOR DATA WITH INHERITANCE TO THE DOM
-var lastParagraph = document.querySelector('.list-item:last-child'); 
+var lastParagraph = document.querySelector('.list-item:last-child');
 
-document.getElementById('button').addEventListener('click', function(){
-  lastParagraph.innerHTML = 'The book I\'m reading now is <em>' + bookOne.title + '</em>, written by ' + bookOne.author + ' and launched in ' + bookOne.year + '. This book is now ' + bookOne.howOld(2019) + ' years old!';
+document.getElementById('button').addEventListener('click', function () {
+  lastParagraph.innerHTML = 'The T-shirt I am currently wearing has a ' + tshirtOne.color + ' color and a ' + tshirtOne.size + ' size.';
+  lastParagraph.style.color = '#f06';
 });
