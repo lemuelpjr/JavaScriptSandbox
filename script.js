@@ -133,37 +133,45 @@
 // });
 
 // TESTING OBJECT CONSTRUCTORS AGAIN
-var Tshirt = function (color, size, stamp) {
-  this.color = color;
-  this.size = size; // small, medium, large, extra-large
-  this.stamp = stamp;
-}
+// var Tshirt = function (color, size, stamp) {
+//   this.color = color;
+//   this.size = size; // small, medium, large, extra-large
+//   this.stamp = stamp;
+// }
 
-// T-SHIRT CONSTRUCTOR INSTANCES
-var tshirtOne = new Tshirt('black', 'medium', true);
-var tshirtTwo = new Tshirt('gray', 'small', false);
-var tshirtThree = new Tshirt('violet', 'large', true);
+// // T-SHIRT CONSTRUCTOR INSTANCES
+// var tshirtOne = new Tshirt('black', 'medium', true);
+// var tshirtTwo = new Tshirt('gray', 'small', false);
+// var tshirtThree = new Tshirt('violet', 'large', true);
 
-// OBJECT PROTOTYPES
-Tshirt.prototype.personAge = function (age) {
-  if (age >= 18) {
-    console.log('This T-shirt is for an adult.');
-  } else if (age > 12 && age < 18) {
-    console.log('This T-shirt is for a teen.');
-  } else {
-    console.log('This T-shirt is for a child.');
-  }
-};
+// // OBJECT PROTOTYPES
+// Tshirt.prototype.personAge = function (age) {
+//   if (age >= 18) {
+//     console.log('This T-shirt is for an adult.');
+//   } else if (age > 12 && age < 18) {
+//     console.log('This T-shirt is for a teen.');
+//   } else {
+//     console.log('This T-shirt is for a child.');
+//   }
+// };
 
-// PROTOTYPE INHERITANCE
-tshirtOne.personAge(28);
-tshirtTwo.personAge(13);
-tshirtThree.personAge(7);
+// // PROTOTYPE INHERITANCE
+// tshirtOne.personAge(28);
+// tshirtTwo.personAge(13);
+// tshirtThree.personAge(7);
 
-// ADDING CONSTRUCTOR DATA WITH INHERITANCE TO THE DOM
+// // ADDING CONSTRUCTOR DATA WITH INHERITANCE TO THE DOM
+// var lastParagraph = document.querySelector('.list-item:last-child');
+
+// document.getElementById('button').addEventListener('click', function () {
+//   lastParagraph.innerHTML = 'The T-shirt I am currently wearing has a ' + tshirtOne.color + ' color and a ' + tshirtOne.size + ' size.';
+//   lastParagraph.style.color = '#f06';
+// });
+
+// Button click function
 var lastParagraph = document.querySelector('.list-item:last-child');
 
 document.getElementById('button').addEventListener('click', function () {
-  lastParagraph.innerHTML = 'The T-shirt I am currently wearing has a ' + tshirtOne.color + ' color and a ' + tshirtOne.size + ' size.';
+  lastParagraph.innerHTML = 'Please, open the browser console to see the results of this current version';
   lastParagraph.style.color = '#f06';
 });
