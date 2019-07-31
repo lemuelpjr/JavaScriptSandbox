@@ -175,3 +175,31 @@ document.getElementById('button').addEventListener('click', function () {
   lastParagraph.innerHTML = 'Please, open the browser console to see the results of this current version';
   lastParagraph.style.color = '#f06';
 });
+
+// PASSING FUNCTIONS AS ARGUMENTS INSIDE FUNCTIONS
+var numbers = [1, 3, 5, 18, 24, 32, 45, 81];
+
+// Generic function for properties of numbers
+function numProperties(numArray, fn) {
+  var newArray = [];
+  for (var i = 0; i < numArray.length; i++) {
+    newArray.push(fn(numArray[i]));
+  }
+  return newArray;
+}
+
+// Check if number is odd or even
+function oddOrEven (n) {
+  if (n % 2 === 0) {
+    return n + ' is an EVEN number.';
+  } else {
+    return n + ' is an ODD number.';
+  }
+}
+
+// Check if number is prime
+
+// Call functions
+var oddsAndEvens = numProperties(numbers, oddOrEven);
+
+console.log(oddsAndEvens);
