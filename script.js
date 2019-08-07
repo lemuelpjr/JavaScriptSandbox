@@ -199,15 +199,15 @@
 function logoType(budget) {
   if (budget <= 100) {
     return function(name) {
-      console.log(name + ' your logo will be ready in 1 week.');
+      console.log(`${name} your logo will be ready in 1 week.`);
     };
   } else if (budget > 100 && budget < 200) {
     return function(name) {
-      console.log(name + ' your logo will be ready in 2 weeks.');
+      console.log(`${name} your logo will be ready in 2 weeks.`);
     };
   } else {
     return function(name) {
-      console.log(name + ' your logo will be ready in 3 to 4 weeks.');
+      console.log(`${name} your logo will be ready in 3 to 4 weeks.`);
     };
   }
 }
@@ -218,7 +218,7 @@ logoType(80)('Lukas');
 logoType(260)('Anna');
 
 // Button click function
-var lastParagraph = document.querySelector('.list-item:last-child');
+let lastParagraph = document.querySelector('.list-item:last-child');
 
 document.getElementById('button').addEventListener('click', function () {
   lastParagraph.innerHTML = 'Please, open the browser console to see the results of this current version';
