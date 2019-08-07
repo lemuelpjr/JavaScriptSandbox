@@ -196,37 +196,31 @@
 
 // FUNCTIONS RETURNING FUNCTIONS
 // Check available budget
-// function logoType(budget) {
-//   if (budget <= 100) {
-//     return function(name) {
-//       console.log(`${name} your logo will be ready in 1 week.`);
-//     };
-//   } else if (budget > 100 && budget < 200) {
-//     return function(name) {
-//       console.log(`${name} your logo will be ready in 2 weeks.`);
-//     };
-//   } else {
-//     return function(name) {
-//       console.log(`${name} your logo will be ready in 3 to 4 weeks.`);
-//     };
-//   }
-// }
+function logoType(budget) {
+  if (budget <= 100) {
+    return name => console.log(`${name} your logo will be ready in 1 week.`);
+  } else if (budget > 100 && budget < 200) {
+    return name => console.log(`${name} your logo will be ready in 2 weeks.`);
+  } else {
+    return name => console.log(`${name} your logo will be ready in 3 to 4 weeks.`);
+  }
+}
 
-// // Call both functions at the same time
-// logoType(130)('Mark');
-// logoType(80)('Lukas');
-// logoType(260)('Anna');
+// Call both functions at the same time
+logoType(130)('Mark');
+logoType(80)('Lukas');
+logoType(260)('Anna');
 
 // TESTING ARROW FUNCTIONS
 // Using ES5 syntax
-function sum(a, b) {
-  return a + b;
-}
-// Using ES6 syntax
-let sum2 = (a,b) => a + b;
+// function sum(a, b) {
+//   return a + b;
+// }
+// // Using ES6 syntax
+// let sum2 = (a,b) => a + b;
 
-console.log(`The result with ES5 syntax is ${sum(5, 4)}`);
-console.log(`The result with ES6 syntax is ${sum2(5, 4)}`);
+// console.log(`The result with ES5 syntax is ${sum(5, 4)}`);
+// console.log(`The result with ES6 syntax is ${sum2(5, 4)}`);
 
 // Button click function
 let lastParagraph = document.querySelector('.list-item:last-child');
