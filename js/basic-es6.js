@@ -8,11 +8,11 @@ document.getElementById('button').addEventListener('click', function () {
 
 // TESTING ARROW FUNCTIONS
 // Using ES5 syntax
-// function sum(a, b) {
-//   return a + b;
-// }
-// // Using ES6 syntax
-// let sum2 = (a,b) => a + b;
+function sum(a, b) {
+  return a + b;
+}
+// Using ES6 arrow function syntax
+let sum2 = (a, b) => a + b;
 
-// console.log(`The result with ES5 syntax is ${sum(5, 4)}`);
-// console.log(`The result with ES6 syntax is ${sum2(5, 4)}`);
+console.log(`The result with ES5 syntax is ${sum(5, 4)}`);
+console.log(`The result with ES6 syntax is ${sum2(5, 4)}`);
