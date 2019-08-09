@@ -7,12 +7,20 @@ document.getElementById('button').addEventListener('click', function () {
 });
 
 // TESTING ARROW FUNCTIONS
-// Using ES5 syntax
-function sum(a, b) {
-  return a + b;
-}
-// Using ES6 arrow function syntax
-let sum2 = (a, b) => a + b;
+// // Using ES5 syntax
+// function sum(a, b) {
+//   return a + b;
+// }
+// // Using ES6 arrow function syntax
+// let sum2 = (a, b) => a + b;
 
-console.log(`The result with ES5 syntax is ${sum(5, 4)}`);
-console.log(`The result with ES6 syntax is ${sum2(5, 4)}`);
+// Using ES5 syntax
+function isPositive(number) {
+  return number >= 0; // Return a true or false value
+}
+
+// Using ES6 arrow function syntax
+let isPositive2 = number => number >= 0; // Return a true or false value
+
+console.log(`The result using ES5 syntax is "${isPositive(5)}"`);
+console.log(`The result using ES6 syntax is "${isPositive2(5)}"`);
