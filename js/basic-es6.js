@@ -15,12 +15,18 @@ document.getElementById('button').addEventListener('click', function () {
 // let sum2 = (a, b) => a + b;
 
 // Using ES5 syntax
-function isPositive(number) {
-  return number >= 0; // Return a true or false value
+// function isPositive(number) {
+//   return number >= 0; // Return a true or false value
+// }
+// // Using ES6 arrow function syntax
+// let isPositive2 = number => number >= 0; // Return a true or false value
+
+// Using ES5 syntax
+function randomNumber() {
+  return Math.floor(Math.random() * 10);
 }
-
 // Using ES6 arrow function syntax
-let isPositive2 = number => number >= 0; // Return a true or false value
+let randomNumber2 = () => Math.floor(Math.random() * 10); // Numbers might not be the same
 
-console.log(`The result using ES5 syntax is "${isPositive(5)}"`);
-console.log(`The result using ES6 syntax is "${isPositive2(5)}"`);
+console.log(`The result using ES5 syntax is "${randomNumber()}"`);
+console.log(`The result using ES6 syntax is "${randomNumber2()}"`);
