@@ -1,7 +1,7 @@
 // Button click function
 let lastParagraph = document.querySelector('.list-item:last-child');
 
-document.getElementById('button').addEventListener('click', function () {
+document.getElementById('button').addEventListener('click', () => {
   lastParagraph.innerHTML = 'Please, open the browser console to see the results of this current version';
   lastParagraph.style.color = '#f06';
 });
