@@ -22,11 +22,16 @@ document.getElementById('button').addEventListener('click', () => {
 // let isPositive2 = number => number >= 0; // Return a true or false value
 
 // Using ES5 syntax
-function randomNumber() {
-  return Math.floor(Math.random() * 10);
-}
-// Using ES6 arrow function syntax
-let randomNumber2 = () => Math.floor(Math.random() * 10); // Numbers might not be the same
+// function randomNumber() {
+//   return Math.floor(Math.random() * 10);
+// }
+// // Using ES6 arrow function syntax
+// let randomNumber2 = () => Math.floor(Math.random() * 10); // Numbers might not be the same
 
-console.log(`The result using ES5 syntax is "${randomNumber()}"`);
-console.log(`The result using ES6 syntax is "${randomNumber2()}"`);
+// DESTRUCTURING EXAMPLES
+const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+const [a,, c, ...rest] = alphabet; // Skip "B" and return an array with all the letters after "C"
+
+console.log(a);
+console.log(c);
+console.log(rest);
