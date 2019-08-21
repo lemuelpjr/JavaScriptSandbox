@@ -29,9 +29,18 @@ document.getElementById('button').addEventListener('click', () => {
 // let randomNumber2 = () => Math.floor(Math.random() * 10); // Numbers might not be the same
 
 // DESTRUCTURING EXAMPLES
+// Array example
 const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 const [a,, c, ...rest] = alphabet; // Skip "B" and return an array with all the letters after "C"
 
-console.log(a);
-console.log(c);
-console.log(rest);
+// Object example
+let tShirt = {
+  color: 'Gray',
+  size: 'M',
+  price: 20,
+  stamp: true
+};
+
+let {color, size, stamp, price} = tShirt; // Variable names MUST MATCH but the order doesn't
+
+console.log(color, size, stamp, price);
