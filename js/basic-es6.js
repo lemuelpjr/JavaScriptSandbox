@@ -45,9 +45,16 @@ document.getElementById('button').addEventListener('click', () => {
 
 // REST OPERATOR EXAMPLES
 // Function example
-const ages = [18, 21, 45, 12, 83];
-let minAge1 = Math.min(ages); // The array is passed as a single argument
-let minAge2 = Math.min(...ages); // The array will be spread into 5 individual arguments
+// const ages = [18, 21, 45, 12, 83];
+// let minAge1 = Math.min(ages); // The array is passed as a single argument
+// let minAge2 = Math.min(...ages); // The array will be spread into 5 individual arguments
 
-console.log(`The minimum age in this set is ${minAge1}`);
-console.log(`The minimum age in this set is ${minAge2}`);
+// Array example
+const parents = ['Adam', 'Eve'];
+const children = ['Cain', 'Abel', 'Seth'];
+
+const fullFamily1 = [parents, children]; // Create a nested array
+const fullFamily2 = [...parents, ...children]; // Combine previous arrays into a single one
+
+console.log(fullFamily1);
+console.log(fullFamily2);
