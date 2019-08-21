@@ -29,18 +29,25 @@ document.getElementById('button').addEventListener('click', () => {
 // let randomNumber2 = () => Math.floor(Math.random() * 10); // Numbers might not be the same
 
 // DESTRUCTURING EXAMPLES
-// Array example
-const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
-const [a,, c, ...rest] = alphabet; // Skip "B" and return an array with all the letters after "C"
+// // Array example
+// const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+// const [a,, c, ...rest] = alphabet; // Skip "B" and return an array with all the letters after "C"
 
-// Object example
-let tShirt = {
-  color: 'Gray',
-  size: 'M',
-  price: 20,
-  stamp: true
-};
+// // Object example
+// let tShirt = {
+//   color: 'Gray',
+//   size: 'M',
+//   price: 20,
+//   stamp: true
+// };
 
-let {color, size, stamp, price} = tShirt; // Variable names MUST MATCH but the order doesn't
+// let {color, size, stamp, price} = tShirt; // Variable names MUST MATCH but the order doesn't
 
-console.log(color, size, stamp, price);
+// REST OPERATOR EXAMPLES
+// Function example
+const ages = [18, 21, 45, 12, 83];
+let minAge1 = Math.min(ages); // The array is passed as a single argument
+let minAge2 = Math.min(...ages); // The array will be spread into 5 individual arguments
+
+console.log(`The minimum age in this set is ${minAge1}`);
+console.log(`The minimum age in this set is ${minAge2}`);
